@@ -361,3 +361,15 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Assets/Scenes
+/Assets/Prefabs
+/Assets/Polybrush Data/Brush Settings
+/Assets/AddOns
+/Assets/Scripts/BuyHealth.cs
+/Assets/Gizmos/Cinemachine
+/Assets/unity-chan!/Unity-chan! Model
+/Temp
+/UIElementsSchema
+/UserSettings
+/Library
+/ProjectSettings
