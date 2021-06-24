@@ -14,6 +14,8 @@ public class PlayerCamera : MonoBehaviour
     private Vector2 _cameraRotation = Vector2.zero;
     void Update()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+
         _cameraRotation.y += Input.GetAxis("Mouse X");
         _cameraRotation.x -= Input.GetAxis("Mouse Y");
         

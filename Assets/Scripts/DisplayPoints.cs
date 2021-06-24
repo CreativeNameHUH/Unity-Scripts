@@ -4,11 +4,11 @@ using UnityEngine.UI;
 
 public class DisplayPoints : Variables
 {
-    TextMeshPro scoreText;
+    TextMeshProUGUI scoreText;
 
     void Start()
     {
-        scoreText = GetComponent<TextMeshPro>();
+        scoreText = GetComponent<TextMeshProUGUI>();
     }
     void Update()
     {
