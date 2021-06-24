@@ -83,6 +83,7 @@
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Player\RespawnPlayer.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Packages\DefaultPlayables\TimeDilation\TimeDilationClip.cs" />
     <Compile Include="Assets\Scripts\DEBUG_OnCollision.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\MaterialSwitcherMixerBehaviour.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Camera\LayerCullDistances.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Localization\TranslatedText.cs" />
@@ -105,8 +106,10 @@
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Effects\GunnerLightning.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Player\PlayerInput.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Player\CheckpointGroup.cs" />
+    <Compile Include="Assets\Scripts\BuyHealth.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenTrack.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Helpers\RigidbodyDelayedForce.cs" />
+    <Compile Include="Assets\Scripts\BuyJump.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Runtime\GameCommandType.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Enemies\Spitter\SpitterSMBHit.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\DamageSystem\DamageZone.cs" />
@@ -286,8 +289,6 @@
     <Compile Include="Assets\AddOns\3DGamekit\Packages\SceneManagement\Runtime\IDataPersister.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnTriggerEnter.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
-    <Compile Include="Assets\Scripts\BuyHealth.cs" />
-    <Compile Include="Assets\Scripts\BuyJump.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
