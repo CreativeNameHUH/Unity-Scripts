@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{D85529D5-3132-79FE-3532-420A55503D54}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -53,7 +54,8 @@
     <UnityVersion>2021.1.10f1</UnityVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="D:\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
@@ -139,6 +141,7 @@
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Timeline\TimeMachine\TimeMachineBehaviour.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringManager.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\DisplayPoints.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\RandomWind.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Core\InteractOnCollision.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Helpers\FixedUpdateFollow.cs" />
@@ -289,7 +292,8 @@
     <Compile Include="Assets\AddOns\3DGamekit\Packages\SceneManagement\Runtime\IDataPersister.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnTriggerEnter.cs" />
     <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
-    <Compile Include="Assets\Scripts\DisplayPoints.cs" />
+    <Compile Include="Assets\Scripts\PlayerGun.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
@@ -1043,6 +1047,7 @@
       <Name>WorldBuildingRuntime</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
