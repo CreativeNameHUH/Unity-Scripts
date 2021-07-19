@@ -29,14 +29,14 @@ public class Health : MonoBehaviour
         HealthPoints = 100f;
     }
 
-    void Awake()
+    private void Awake()
     {
         if (SpawnPoolTag.Length <= 0) return;
         _pool = GameObject.FindWithTag(SpawnPoolTag).GetComponent<ObjectPool>();
 
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
         {

@@ -7,7 +7,7 @@ public class ObjectPool : MonoBehaviour
     public GameObject ObjectPrefab = null;
     public int PoolSize = 10;
 
-    void Start()
+    private void Start()
     {
         GeneratePool();
     }

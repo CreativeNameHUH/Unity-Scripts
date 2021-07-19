@@ -6,7 +6,7 @@ public class BuyJump : Variables
     public float PerkJump = 4f;
     public bool AlreadyBought;
 
-    void OnMouseUp()
+    private void OnMouseUp()
     {
         if (AlreadyBought) return;
         if (!(PlayerPoints >= PerkCost)) return;

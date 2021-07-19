@@ -1,10 +1,13 @@
-using Gamekit3D;
 using UnityEngine;
 
 public class PlayerGun : Variables
 {
     public Camera PlayerCamera;
-    void Update()
+    public ParticleSystem MuzzleFlash;
+
+    public float GunImpactForce = 20f;
+
+    private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -12,10 +15,11 @@ public class PlayerGun : Variables
         }
     }
 
-    void Shoot()
+    private void Shoot()
     {
         RaycastHit hit;
         
+        MuzzleFlash.Play();
         if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hit, PlayerGunRange))
         {
             Debug.Log(hit.transform.name);
@@ -25,6 +29,11 @@ public class PlayerGun : Variables
             if (enemy != null)
             {
                 enemy.TakeDamage(PlayerGunDamage);
+            }
+
+            if (hit.rigidbody != null)
+            {
+                hit.rigidbody.AddForce(- hit.normal * GunImpactForce);
             }
         }
 

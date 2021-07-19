@@ -12,7 +12,8 @@ public class PlayerCamera : MonoBehaviour
     public Transform Body;
 
     private Vector2 _cameraRotation = Vector2.zero;
-    void Update()
+
+    private void Update()
     {
         Cursor.lockState = CursorLockMode.Locked;
 

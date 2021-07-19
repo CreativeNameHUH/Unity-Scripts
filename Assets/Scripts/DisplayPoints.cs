@@ -4,14 +4,15 @@ using UnityEngine.UI;
 
 public class DisplayPoints : Variables
 {
-    TextMeshProUGUI scoreText;
+    public TextMeshProUGUI ScoreText;
 
-    void Start()
+    private void Start()
     {
-        scoreText = GetComponent<TextMeshProUGUI>();
+        ScoreText = GetComponent<TextMeshProUGUI>();
     }
-    void Update()
+
+    private void Update()
     {
-        scoreText.text = "Points: " + PlayerPoints;
+        ScoreText.text = "Points: " + PlayerPoints;
     }
 }

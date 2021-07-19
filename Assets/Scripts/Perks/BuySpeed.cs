@@ -6,7 +6,8 @@ public class BuySpeed : Variables
     public float PerkSprint = 10f;
     public float PerkSpeed = 4f;
     public bool AlreadyBought;
-    void OnMouseUp()
+
+    private void OnMouseUp()
     {
         if (AlreadyBought) return;
         if (!(PlayerPoints >= 100f)) return;

@@ -6,7 +6,7 @@ public class SpawnTimer : MonoBehaviour
     public float SpawnInterval = 5f;
     private ObjectPool _pool = null;
 
-    void Awake()
+    private void Awake()
     {
         _pool = GameObject.FindWithTag(SpawnPoolTag).GetComponent<ObjectPool>();
     }
@@ -14,7 +14,8 @@ public class SpawnTimer : MonoBehaviour
     {
         _pool.Spawn(null, transform.position, transform.rotation, Vector3.one);
     }
-    void Start()
+
+    private void Start()
     {
         InvokeRepeating("Spawn", SpawnInterval, SpawnInterval);
     }

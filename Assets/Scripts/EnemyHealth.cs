@@ -15,7 +15,7 @@ public class EnemyHealth : Variables
 
     }
 
-    void Die()
+    private void Die()
     {
         Destroy(gameObject);
     }
