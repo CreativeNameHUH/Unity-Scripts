@@ -3,30 +3,28 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : Variables
 {
-    /*public float PlayerSpeed = 2f;
-    public float SprintSpeed = 4f;
-    public float JumpForce = 10f;*/
     public bool IsGrounded = true;
     public Vector3 Jump;
-    
-    Rigidbody _rigidbody;
 
-    void OnCollisionStay()
+    private Rigidbody _rigidbody;
+
+    private void OnCollisionStay()
     {
         IsGrounded = true;
     }
 
-    void OnCollisionExit()
+    private void OnCollisionExit()
     {
         IsGrounded = false;
     }
 
-    void Start()
+    private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         Jump = new Vector3(0f, 500f, 0f);
     }
-    void Update()
+
+    private void Update()
     {
         float xAxis = Input.GetAxis("X Axis");
         float zAxis = Input.GetAxis("Z Axis");

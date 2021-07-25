@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class SpawnTimer : MonoBehaviour
+public class SpawnTimer : Variables
 {
     public string SpawnPoolTag = "EnemyPool";
     public float SpawnInterval = 5f;
     private ObjectPool _pool = null;
 
-    void Awake()
+    private void Awake()
     {
         _pool = GameObject.FindWithTag(SpawnPoolTag).GetComponent<ObjectPool>();
     }
@@ -14,8 +14,18 @@ public class SpawnTimer : MonoBehaviour
     {
         _pool.Spawn(null, transform.position, transform.rotation, Vector3.one);
     }
-    void Start()
+
+    private void Start()
     {
         InvokeRepeating("Spawn", SpawnInterval, SpawnInterval);
+    }
+
+    private void Update()
+    {
+        if (GameNewSpawnTimer)
+        {
+            InvokeRepeating("Spawn", SpawnInterval + 5, SpawnInterval + 5);
+            GameNewSpawnTimer = false;
+        }
     }
 }

@@ -1,23 +1,23 @@
 using UnityEngine;
 
 public class DEBUG_OnCollision : MonoBehaviour
-{ 
-    void OnCollisionEnter(Collision collision)
+{
+    private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Enter called");
     }
 
-    void OnCollisionStay(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         Debug.Log("Stay called");
     }
 
-    void OnCollisionExit(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
         Debug.Log("Exit called");
     }
 
-    void Start()
+    private void Start()
     {
         Debug.Log("DEBUG_OnCollision ");
     }

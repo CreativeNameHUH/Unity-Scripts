@@ -373,3 +373,7 @@ FodyWeavers.xsd
 /UserSettings
 /Library
 /ProjectSettings
+
+# Other files
+*.png
+/Assets/DelthorGames/AKM
