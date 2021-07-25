@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BuyJump : Variables
 {
-    public float PerkCost = 300f;
+    public float PerkCost = 3000f;
     public float PerkJump = 4f;
     public bool AlreadyBought;
 

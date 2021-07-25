@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{8221D247-DECF-27EB-C583-31815DDEDA82}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -53,58 +54,11 @@
     <UnityVersion>2021.1.10f1</UnityVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="D:\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\WorldBuilding\Editor\InstancePainterEditor.Inspector.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\DefaultPlayables\LightControl\Editor\LightControlDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\DefaultPlayables\Editor\TimelinePlayableWizard.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\DefaultPlayables\ScreenFader\Editor\ScreenFaderDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Editor\FilterLOD.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\DefaultPlayables\TransformTween\Editor\TransformTweenDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Editor\SimpleTranslatorEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\WorldBuilding\Editor\InstancePainterEditor.SceneGUI.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\SimpleSFX\Editor\SimpleFXEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Core\Editor\ScenarioControllerEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\DefaultPlayables\StandardMaterialEmission\Editor\StandardMaterialEmissionDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Helpers\Editor\CameraSettingsEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Editor\NewSceneCreator.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\DefaultPlayables\TimeDilation\Editor\TimeDilationDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\SceneManagement\Editor\DataPersisterEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Editor\CommandReceiverEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\DefaultPlayables\TextSwitcher\Editor\TextSwitcherDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Localization\Editor\TranslatedPhrasesEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Editor\SendGameCommandEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\SceneManagement\Editor\SceneNameDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\WorldBuilding\Editor\MegaSmartObjectEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Core\Editor\AddObjectiveSubEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\SimpleSFX\Editor\SynthLayerDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Player\Editor\CheckpointGroupEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Editor\CheckpointEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\WorldBuilding\Editor\InstancePainterEditor.cs" />
-    <Compile Include="Assets\unity-chan!\Unity-chan! Model\Editor\CreateLocatorHere.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\SceneManagement\Editor\ParameterSetterDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Editor\AutoSetQualitySetting.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Camera\Editor\LayerCullDistancesEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Core\Editor\SubEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Localization\Editor\TranslatorEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\Editor\MaterialSwitcherDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Editor\AddCollidersToHierarchy.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Editor\SimpleTransformerEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Localization\Editor\PhraseDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Timeline\TimeMachine\Editor\TimeMachineClipInspector.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Timeline\SetLocation\Editor\SetLocationDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\SceneManagement\Editor\TransitionStartEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Timeline\AudioSnapshot\Editor\AudioSnapshotDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Timeline\SceneReloader\Editor\SceneReloaderDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\Interactive\Editor\TeleporterGizmo.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Player\Editor\PlayerControllerEditor.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Game\Timeline\CutsceneScriptControl\Editor\CutsceneScriptControlDrawer.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Packages\WorldBuilding\Editor\PaletteWizard.cs" />
-    <Compile Include="Assets\AddOns\3DGamekit\Scripts\Editor\ExportTerrain.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

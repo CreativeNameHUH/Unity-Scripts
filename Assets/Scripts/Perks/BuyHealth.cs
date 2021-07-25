@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BuyHealth : Variables
 {
-    public float PerkCost = 200f;
+    public float PerkCost = 2500f;
     public float PerkHealth = 200f;
 
     private void OnMouseUp()

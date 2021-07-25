@@ -1,20 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+public class ObjectPool : Variables
 {
     public GameObject ObjectPrefab = null;
-    public int PoolSize = 10;
 
     private void Start()
     {
         GeneratePool();
     }
 
+    private void Update()
+    {
+        if (GameNewObjectPool)
+        {
+            GeneratePool();
+            GameNewObjectPool = false;
+        }
+    }
+
     public void GeneratePool()
     {
-        for (int i = 0; i < PoolSize; i++)
+        for (int i = 0; i < EnemyAmount; i++)
         {
             GameObject Obj = Instantiate(ObjectPrefab,
             Vector3.zero, Quaternion.identity,

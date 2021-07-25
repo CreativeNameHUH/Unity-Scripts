@@ -1,8 +1,7 @@
 using UnityEngine;
 
 public class AttackState : MonoBehaviour, IFSMState
-{
-    public ParticleSystem MuzzleFlash; 
+{ 
     public FSMStateType StateName => FSMStateType.Attack;
 
     private Transform _player;
