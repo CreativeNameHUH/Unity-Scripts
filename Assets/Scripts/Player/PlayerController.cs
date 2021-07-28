@@ -21,7 +21,7 @@ public class PlayerController : Variables
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        Jump = new Vector3(0f, 500f, 0f);
+        Jump = new Vector3(0f, 150f, 0f);
     }
 
     private void Update()
@@ -48,6 +48,5 @@ public class PlayerController : Variables
             _rigidbody.AddForce(Jump * PlayerJump * Time.deltaTime, ForceMode.Impulse);
             IsGrounded = false;
         }
-
     }
 }

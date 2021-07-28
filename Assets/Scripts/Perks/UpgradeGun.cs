@@ -2,10 +2,11 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class BuyHealth : Variables
+public class UpgradeGun : Variables
 {
-    public float PerkCost = 2500f;
-    public float PerkHealth = 200f;
+    public float UpgradeCost = 3000f;
+    public float DamageMultiplier = 1.5f;
+    public int MagazineUpgrade = 5;
     public float InteractionRadius = 1f;
 
     public Camera PCamera;
@@ -26,30 +27,17 @@ public class BuyHealth : Variables
         Gizmos.DrawWireSphere(transform.position, InteractionRadius);
     }
 
-    private void Buy()
-    {
-        if (PlayerExtraHealth) return;
-        if (!(PlayerPoints >= PerkCost)) return;
-
-        PlayerHealth = PerkHealth;
-        PlayerPoints -= PerkCost;
-        PlayerExtraHealth = true;
-
-        Debug.Log("Bought Health");
-        Debug.Log("Points: " + PlayerPoints);
-    }
-
     private void Update()
     {
         _ray = PCamera.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(_ray, out _hit, InteractionRadius))
         {
-            BuyHealth perk = _hit.collider.GetComponent<BuyHealth>();
+            UpgradeGun upgrade = _hit.collider.GetComponent<UpgradeGun>();
 
-            if (perk == null) return;
+            if (upgrade == null) return;
 
-            DisplayInfo.text = "Press E to buy Tia Maria " + PerkCost;
+            DisplayInfo.text = "Press E to upgrade your gun for " + UpgradeCost;
 
             if (Input.GetKeyUp(KeyCode.E))
             {
@@ -60,5 +48,19 @@ public class BuyHealth : Variables
         }
 
         StartCoroutine(Info());
+    }
+
+    private void Buy()
+    {
+        if (!(PlayerPoints >= UpgradeCost)) return;
+
+        PlayerGunDamage *= DamageMultiplier;
+        PlayerGunMagSize += MagazineUpgrade;
+        PlayerGunUpgrade = true;
+
+        PlayerPoints -= UpgradeCost;
+
+        Debug.Log("Bought an upgrade: " + PlayerGunDamage + " dmg");
+        Debug.Log("Points: " + PlayerPoints);
     }
 }

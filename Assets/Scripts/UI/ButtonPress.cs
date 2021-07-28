@@ -18,9 +18,11 @@ public class ButtonPress : MonoBehaviour
         {
             case 0:
                 break;
+
             case 1:
                 SceneManager.LoadScene(SceneName);
                 break;
+
             case 2:
                 Application.Quit();
                 break;
