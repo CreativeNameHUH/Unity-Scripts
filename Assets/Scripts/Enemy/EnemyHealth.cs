@@ -12,6 +12,7 @@ public class EnemyHealth : Variables
             Die();
             PlayerPoints += 100;
             PlayerKillsInRound += 1;
+            PlayerTotalKills += 1;
         }
 
     }

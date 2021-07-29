@@ -377,3 +377,21 @@ FodyWeavers.xsd
 # Other files
 *.png
 /Assets/DelthorGames/AKM
+/Assets/DBK
+/Assets/EasyRoads3D
+/Assets/EasyRoads3D scenes
+/Assets/MB
+/Assets/MB2/Modular Building 2
+/Assets/ModularBuildingsFramework
+/Assets/MTree
+/Assets/Sci-Fi Drinks Pack FREE
+/Assets/ak47_fire2.wav
+*.wav
+*.mp3
+/V0.1
+/V0.2
+/V1.0
+/V1.1
+/V1.15
+/V1.16
+/V1.161

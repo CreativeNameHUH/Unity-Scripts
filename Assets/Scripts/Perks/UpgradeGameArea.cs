@@ -2,10 +2,9 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class BuyHealth : Variables
+public class UpgradeGameArea : Variables
 {
-    public float PerkCost = 2500f;
-    public float PerkHealth = 200f;
+    public float UpgradeCost = 4000f;
     public float InteractionRadius = 1f;
 
     public Camera PCamera;
@@ -26,30 +25,17 @@ public class BuyHealth : Variables
         Gizmos.DrawWireSphere(transform.position, InteractionRadius);
     }
 
-    private void Buy()
-    {
-        if (PlayerExtraHealth) return;
-        if (!(PlayerPoints >= PerkCost)) return;
-
-        PlayerHealth = PerkHealth;
-        PlayerPoints -= PerkCost;
-        PlayerExtraHealth = true;
-
-        Debug.Log("Bought Health");
-        Debug.Log("Points: " + PlayerPoints);
-    }
-
     private void Update()
     {
         _ray = PCamera.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(_ray, out _hit, InteractionRadius))
         {
-            BuyHealth perk = _hit.collider.GetComponent<BuyHealth>();
+            UpgradeGameArea upgrade = _hit.collider.GetComponent<UpgradeGameArea>();
 
-            if (perk == null) return;
+            if (upgrade == null) return;
 
-            DisplayInfo.text = "Press E to buy Tia Maria " + PerkCost;
+            DisplayInfo.text = "Press E to upgrade this arena for " + UpgradeCost;
 
             if (Input.GetKeyUp(KeyCode.E))
             {
@@ -60,5 +46,16 @@ public class BuyHealth : Variables
         }
 
         StartCoroutine(Info());
+    }
+
+    private void Buy()
+    {
+        if (PlayerPoints >= UpgradeCost && GameAreaSize < 6)
+        {
+            PlayerPoints -= UpgradeCost;
+            UpgradeCost += 2000f;
+            GameAreaSize += 1;
+            GameAreaUpdate = true;
+        }
     }
 }

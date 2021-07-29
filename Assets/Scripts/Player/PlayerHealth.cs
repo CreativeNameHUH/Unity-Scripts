@@ -1,31 +1,35 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 internal class PlayerHealth : Variables
-  {
+{
+    public string GameOverScene;
 
-      public TextMeshProUGUI DisplayHealth;
+    public TextMeshProUGUI DisplayHealth;
 
-      public void TakeDamage(float damage)
-      {
-          PlayerHealth -= damage;
+    public void TakeDamage(float damage)
+    {
+        PlayerHealth -= damage;
 
-          if (PlayerHealth <= 0f)
-          {
-              Debug.Log("You are dead");
-          }
+        if (PlayerHealth <= 0f)
+        {
+            Debug.Log("You are dead");
+            PlayerPrefs.SetString("PlayerKills", PlayerTotalKills.ToString());
+            DestroyScriptInstance();
+            SceneManager.LoadScene(GameOverScene);
+        }
 
-          StartCoroutine(RegenerateHealth());
-      }
+        StartCoroutine(RegenerateHealth());
+    }
 
+    private IEnumerator RegenerateHealth()
+    {
+        yield return new WaitForSeconds(5);
 
-      private IEnumerator RegenerateHealth()
-      {
-          yield return new WaitForSeconds(5);
-
-          if (PlayerExtraHealth) 
-          {
+        if (PlayerExtraHealth)
+        {
             while (PlayerHealth != 200f)
             {
                 if (PlayerHealth > 190f)
@@ -36,12 +40,11 @@ internal class PlayerHealth : Variables
                 {
                     PlayerHealth += 20f;
                 }
-                Update();
                 yield return new WaitForSeconds(5);
             }
-          }
-          else
-          {
+        }
+        else
+        {
             while (PlayerHealth != 100f)
             {
                 if (PlayerHealth > 90f)
@@ -52,22 +55,18 @@ internal class PlayerHealth : Variables
                 {
                     PlayerHealth += 10f;
                 }
-
-                Update();
                 yield return new WaitForSeconds(5);
             }
-          }
+        }
+    }
 
-      }
+    private void Start()
+    {
+        DisplayHealth.text = "Health: " + PlayerHealth;
+    }
 
-      private void Start()
-      { 
-          DisplayHealth.text = "Health: " + PlayerHealth;
-      }
-
-      private void Update()
-      { 
-          DisplayHealth.text = "Health: " + PlayerHealth;
-      }
-
-  }
+    private void Update()
+    {
+        DisplayHealth.text = "Health: " + PlayerHealth;
+    }
+}

@@ -9,11 +9,10 @@ public class Round : Variables
 
     private void NextRound()
     {
-        _round++;
-        EnemyAmount = 5 * _round;
-        EnemyHealth += 10;
-        PlayerTotalKills = PlayerKillsInRound;
         PlayerKillsInRound = 0;
+        _round++;
+        EnemyAmount = 2 * _round;
+        EnemyHealth += 10;
 
         Text.text = _round.ToString();
         GameNewObjectPool = true;
@@ -28,7 +27,11 @@ public class Round : Variables
 
     void Update()
     {
-        if (PlayerKillsInRound == EnemyAmount)
+        if (_round == 1 && PlayerKillsInRound == 3)
+        {
+            NextRound();
+        }
+        if (_round != 1 && PlayerKillsInRound == EnemyAmount)
         {
             NextRound();
         }
