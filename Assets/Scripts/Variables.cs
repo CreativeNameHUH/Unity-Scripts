@@ -36,4 +36,24 @@ public class Variables : MonoBehaviour
     public static bool GameNewObjectPool = false;
     public static bool GameNewSpawnTimer = false;
     public static bool GameAreaUpdate = false;
+    public void DestroyScriptInstance()
+    {
+        Destroy(this);
+    }
+    public void ResetVariables()
+    {
+        PlayerHealth = 100f;
+        PlayerPoints = 500f;
+        PlayerSpeed = 2f;
+        PlayerSprint = 4f;
+        PlayerJump = 2f;
+        PlayerGunDamage = 35f;
+        PlayerGunMagSize = 30;
+        PlayerTotalKills = 0;
+        PlayerKillsInRound = 0;
+
+        PlayerExtraHealth = false;
+
+        EnemyHealth = 30f;
+    }
 }

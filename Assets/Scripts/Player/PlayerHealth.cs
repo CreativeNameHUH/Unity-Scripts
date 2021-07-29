@@ -17,6 +17,7 @@ internal class PlayerHealth : Variables
         {
             Debug.Log("You are dead");
             PlayerPrefs.SetString("PlayerKills", PlayerTotalKills.ToString());
+            DestroyScriptInstance();
             SceneManager.LoadScene(GameOverScene);
         }
 

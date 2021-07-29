@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : Variables
 {
+    public string GameOverScene = "GameOverScene";
     public bool IsGrounded = true;
     public Vector3 Jump;
 
@@ -20,6 +22,7 @@ public class PlayerController : Variables
 
     private void Start()
     {
+        ResetVariables();
         _rigidbody = GetComponent<Rigidbody>();
         Jump = new Vector3(0f, 150f, 0f);
     }
@@ -47,6 +50,11 @@ public class PlayerController : Variables
         {
             _rigidbody.AddForce(Jump * PlayerJump * Time.deltaTime, ForceMode.Impulse);
             IsGrounded = false;
+        }
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            PlayerPrefs.SetString("PlayerKills", PlayerTotalKills.ToString());
+            SceneManager.LoadScene(GameOverScene);
         }
     }
 }

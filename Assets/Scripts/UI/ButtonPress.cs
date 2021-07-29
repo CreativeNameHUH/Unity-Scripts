@@ -20,6 +20,7 @@ public class ButtonPress : MonoBehaviour
                 break;
 
             case 1:
+                Application.targetFrameRate = 300;
                 SceneManager.LoadScene(SceneName);
                 break;
 
